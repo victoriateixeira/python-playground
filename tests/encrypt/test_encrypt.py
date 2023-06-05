@@ -9,7 +9,7 @@ def test_encrypt_message():
     with pytest.raises(TypeError, match="tipo inválido para key"):
         encrypt_message("abcdef", "2")
 
-    assert encrypt_message("abcdef", 7) == "fedcba"
+    assert encrypt_message("random", 7) == "modnar"
     assert encrypt_message("abcdef", 3) == "cba_fed"
     assert encrypt_message("abcdef", 2) == "fedc_ba"
 
